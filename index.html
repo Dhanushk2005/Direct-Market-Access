@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>AgriBond</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section id="products">
+            <h2>Available Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="product">
+                    <img src="Images/carrots.jpg" alt="Carrot">
+                    <h3>Carrot</h3>
+                    <p>Rs 20.00 / Kg</p>
+                    <button onclick="addToCart('Carrot', 20.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Images/apple.jpg" alt="Apple">
+                    <h3>Apple</h3>
+                    <p>Rs 80.00 / Kg</p>
+                    <button onclick="addToCart('Apple', 80.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Images/orange.jpg" alt="Orange">
+                    <h3>Orange</h3>
+                    <p>Rs 60.00 / Kg</p>
+                    <button onclick="addToCart('Orange', 60.00)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Images/milk.jpg" alt="Milk">
+                    <h3>Milk</h3>
+                    <p>Rs 30.00 / Ltr</p>
+                    <button onclick="addToCart('Milk', 30.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <aside id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <button id="buy-button" onclick="checkout()">Buy</button>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
